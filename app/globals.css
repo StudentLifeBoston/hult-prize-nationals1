@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-hp-black bg-white antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-heritage;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-heritage text-xs font-bold uppercase tracking-[0.2em];
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-black text-hp-black mt-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-hp-border shadow-sm p-6 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl hover:border-heritage/35 hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply inline-block px-2.5 py-0.5 rounded-full text-xs font-bold;
+  }
+
+  .gradient-midnight {
+    @apply bg-gradient-to-br from-midnight via-[#332E78] to-purple;
+  }
+
+  .gradient-heritage {
+    @apply bg-gradient-to-r from-heritage to-purple;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-heritage to-hp-orange;
+  }
+
+  .interactive-link {
+    @apply text-heritage font-semibold transition-all duration-200 hover:text-purple hover:underline underline-offset-2;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/60 shadow-lg;
+  }
+}
