@@ -266,7 +266,7 @@ export default function TravelPage() {
                   <p className="mt-1">
                     <strong className="text-hp-black">Typical cost:</strong> {spot.cost}
                   </p>
-                  <p className="mt-2 text-heritage font-semibold text-xs">Open link -></p>
+                  <p className="mt-2 text-heritage font-semibold text-xs">Open link &rarr;</p>
                 </a>
               ))}
             </div>
@@ -348,7 +348,7 @@ export default function TravelPage() {
                   <p className="mt-1"><strong className="text-hp-black">Cuisine:</strong> {place.cuisine}</p>
                   <p className="mt-1"><strong className="text-hp-black">Typical spend:</strong> {place.spend}</p>
                   <p className="mt-1">{place.note}</p>
-                  <p className="mt-2 text-heritage font-semibold text-xs">Open link -></p>
+                  <p className="mt-2 text-heritage font-semibold text-xs">Open link &rarr;</p>
                 </a>
               ))}
             </div>
