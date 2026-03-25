@@ -274,10 +274,6 @@ export const siteConfig = {
       category: "Travel & Accommodation",
       questions: [
         {
-          q: "Does Hult Prize provide travel reimbursement?",
-          a: "Travel support details will be communicated directly to confirmed participant teams via email. Check the Travel + Stay page for accommodation options.",
-        },
-        {
           q: "Are there recommended hotels near the venue?",
           a: "Yes — hotel recommendations and campus accommodation options are listed on the Travel + Stay page. Details are being finalized and will be posted soon.",
         },
