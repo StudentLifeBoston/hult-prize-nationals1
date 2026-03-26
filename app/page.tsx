@@ -48,7 +48,7 @@ export default function HomePage() {
               <span className="text-gradient">Nationals</span>
               <br />
               <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white/60">
-                Hult Boston
+                US East Coast
               </span>
             </h1>
 
