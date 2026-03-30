@@ -94,8 +94,8 @@ export default function TravelPage() {
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
                   For availability requests, contact{" "}
-                  <a className="text-heritage font-semibold hover:underline" href={`mailto:${siteConfig.contactEmail}`}>
-                    {siteConfig.contactEmail}
+                  <a className="text-heritage font-semibold hover:underline" href="mailto:hulthouse.frontdesk@hult.edu">
+                    hulthouse.frontdesk@hult.edu
                   </a>
                   .
                 </li>
