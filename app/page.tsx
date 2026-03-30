@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: { absolute: "Hult Prize Nationals East Coast" },
   description:
     "Welcome to Hult Prize Nationals at Hult Boston on May 1-2, 2026. Your participant hub for schedule, submissions, FAQs, and travel.",
 };
