@@ -9,16 +9,49 @@ export const metadata: Metadata = {
     "Travel, transit, and first-time visitor guidance for Hult Prize Nationals at Hult Boston 2026.",
 };
 
-function WIPBadge() {
-  return (
-    <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-hp-orange/10 text-hp-orange rounded-full text-xs font-bold border border-hp-orange/20">
-      <span className="w-1.5 h-1.5 rounded-full bg-hp-orange animate-pulse" aria-hidden="true" />
-      Work in Progress
-    </span>
-  );
-}
-
 export default function TravelPage() {
+  const nearbyHotels = [
+    {
+      name: "Holiday Inn Express & Suites Boston - Cambridge",
+      walkTime: "5-8 min walk",
+      location: "250 Monsignor O'Brien Hwy, Cambridge",
+      website:
+        "https://www.ihg.com/holidayinnexpress/hotels/us/en/cambridge/cbggi/hoteldetail",
+      imageUrl:
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80",
+      note: "Closest mainstream option for teams prioritizing quick campus access.",
+    },
+    {
+      name: "Fairfield Inn & Suites Boston Cambridge",
+      walkTime: "6-10 min walk",
+      location: "215 Monsignor O'Brien Hwy, Cambridge",
+      website:
+        "https://www.marriott.com/en-us/hotels/bosfc-fairfield-inn-and-suites-boston-cambridge/overview/",
+      imageUrl:
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      note: "Reliable business-travel setup with easy rideshare and transit access.",
+    },
+    {
+      name: "Hampton Inn by Hilton Boston/Cambridge",
+      walkTime: "10-14 min walk",
+      location: "191 Monsignor O'Brien Hwy, Cambridge",
+      website:
+        "https://www.hilton.com/en/hotels/boscmhx-hampton-boston-cambridge/",
+      imageUrl:
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      note: "Strong value pick for teams balancing convenience and comfort.",
+    },
+    {
+      name: "The Royal Sonesta Boston",
+      walkTime: "12-15 min walk",
+      location: "40 Edwin H Land Blvd, Cambridge",
+      website: "https://www.sonesta.com/royal-sonesta/ma/cambridge/royal-sonesta-boston",
+      imageUrl:
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+      note: "Premium riverfront option suitable for judges, guests, and faculty.",
+    },
+  ];
+
   return (
     <>
       <PageHero
@@ -29,40 +62,6 @@ export default function TravelPage() {
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto space-y-10">
-
-          {/* Hotel Stay */}
-          <div className="card">
-            <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-              <div>
-                <h2 className="text-xl font-black text-hp-black">Hotel Stay</h2>
-                <p className="text-sm text-hp-gray mt-0.5">
-                  Nearby hotels in Cambridge &amp; Boston
-                </p>
-              </div>
-              <WIPBadge />
-            </div>
-
-            <div className="bg-hp-off-white rounded-2xl border border-dashed border-hp-border p-10 text-center">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg
-                  className="w-6 h-6 text-hp-gray"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  />
-                </svg>
-              </div>
-              <p className="text-hp-gray text-sm max-w-md mx-auto">Details coming soon.</p>
-            </div>
-          </div>
-
           {/* Campus Accommodation */}
           <div className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
@@ -74,27 +73,96 @@ export default function TravelPage() {
                   On-campus housing at Hult Boston
                 </p>
               </div>
-              <WIPBadge />
             </div>
 
-            <div className="bg-hp-off-white rounded-2xl border border-dashed border-hp-border p-10 text-center">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg
-                  className="w-6 h-6 text-hp-gray"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+            <div className="rounded-2xl border border-hp-border bg-gradient-to-br from-hp-off-white to-white p-6 sm:p-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-hp-gray">
+                <div className="rounded-xl bg-white border border-hp-border p-4">
+                  <p className="font-bold text-hp-black">Who this is for</p>
+                  <p className="mt-2">
+                    Teams looking for the shortest commute and simple day-of logistics.
+                  </p>
+                </div>
+                <div className="rounded-xl bg-white border border-hp-border p-4">
+                  <p className="font-bold text-hp-black">Why it is convenient</p>
+                  <p className="mt-2">
+                    On-campus stay keeps you close to check-in, rooms, and event support staff.
+                  </p>
+                </div>
               </div>
-              <p className="text-hp-gray text-sm max-w-md mx-auto">Details coming soon.</p>
+              <ul className="mt-5 space-y-2.5 text-sm text-hp-gray">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
+                  Space is limited and assigned on availability.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
+                  Shared-room and check-in details will be confirmed directly with registered teams.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
+                  For availability requests, contact{" "}
+                  <a className="text-heritage font-semibold hover:underline" href={`mailto:${siteConfig.contactEmail}`}>
+                    {siteConfig.contactEmail}
+                  </a>
+                  .
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Hotels */}
+          <div className="card">
+            <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+              <div>
+                <h2 className="text-xl font-black text-hp-black">Hotels</h2>
+                <p className="text-sm text-hp-gray mt-0.5">
+                  Hotels within about a 15-minute walk from campus
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-hp-border bg-hp-off-white/70 p-4 sm:p-5 mb-5">
+              <p className="text-sm text-hp-gray leading-relaxed">
+                Room rates are fluid and can change quickly based on demand, events, and booking timing.
+                We strongly recommend booking in advance to secure better availability and pricing.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {nearbyHotels.map((hotel) => (
+                <article
+                  key={hotel.name}
+                  className="group overflow-hidden rounded-2xl border border-hp-border bg-white hover:border-heritage/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={hotel.imageUrl}
+                      alt={hotel.name}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 rounded-full bg-black/70 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                      {hotel.walkTime}
+                    </span>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-base font-black text-hp-black group-hover:text-heritage transition-colors">
+                      {hotel.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-hp-gray">{hotel.location}</p>
+                    <p className="mt-2 text-sm text-hp-gray">{hotel.note}</p>
+                    <a
+                      href={hotel.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center text-sm font-semibold text-heritage hover:underline"
+                    >
+                      Visit hotel website &rarr;
+                    </a>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
 
