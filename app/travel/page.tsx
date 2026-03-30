@@ -17,8 +17,6 @@ export default function TravelPage() {
       location: "250 Monsignor O'Brien Hwy, Cambridge",
       website:
         "https://www.ihg.com/holidayinnexpress/hotels/us/en/cambridge/cbggi/hoteldetail",
-      imageUrl:
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80",
       note: "Closest mainstream option for teams prioritizing quick campus access.",
     },
     {
@@ -27,8 +25,6 @@ export default function TravelPage() {
       location: "215 Monsignor O'Brien Hwy, Cambridge",
       website:
         "https://www.marriott.com/en-us/hotels/bosfc-fairfield-inn-and-suites-boston-cambridge/overview/",
-      imageUrl:
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
       note: "Reliable business-travel setup with easy rideshare and transit access.",
     },
     {
@@ -37,8 +33,6 @@ export default function TravelPage() {
       location: "191 Monsignor O'Brien Hwy, Cambridge",
       website:
         "https://www.hilton.com/en/hotels/boscmhx-hampton-boston-cambridge/",
-      imageUrl:
-        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
       note: "Strong value pick for teams balancing convenience and comfort.",
     },
     {
@@ -46,8 +40,6 @@ export default function TravelPage() {
       walkTime: "12-15 min walk",
       location: "40 Edwin H Land Blvd, Cambridge",
       website: "https://www.sonesta.com/royal-sonesta/ma/cambridge/royal-sonesta-boston",
-      imageUrl:
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
       note: "Premium riverfront option suitable for judges, guests, and faculty.",
     },
   ];
@@ -133,34 +125,26 @@ export default function TravelPage() {
               {nearbyHotels.map((hotel) => (
                 <article
                   key={hotel.name}
-                  className="group overflow-hidden rounded-2xl border border-hp-border bg-white hover:border-heritage/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                  className="group rounded-2xl border border-hp-border bg-white p-5 hover:border-heritage/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <div className="relative h-44 overflow-hidden">
-                    <img
-                      src={hotel.imageUrl}
-                      alt={hotel.name}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                    <span className="absolute top-3 left-3 rounded-full bg-black/70 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                      {hotel.walkTime}
-                    </span>
-                  </div>
-                  <div className="p-4">
+                  <div className="flex items-start justify-between gap-3">
                     <h3 className="text-base font-black text-hp-black group-hover:text-heritage transition-colors">
                       {hotel.name}
                     </h3>
-                    <p className="mt-1 text-sm text-hp-gray">{hotel.location}</p>
-                    <p className="mt-2 text-sm text-hp-gray">{hotel.note}</p>
-                    <a
-                      href={hotel.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center text-sm font-semibold text-heritage hover:underline"
-                    >
-                      Visit hotel website &rarr;
-                    </a>
+                    <span className="rounded-full bg-hp-off-white px-3 py-1 text-xs font-semibold text-hp-black whitespace-nowrap">
+                      {hotel.walkTime}
+                    </span>
                   </div>
+                  <p className="mt-2 text-sm text-hp-gray">{hotel.location}</p>
+                  <p className="mt-2 text-sm text-hp-gray">{hotel.note}</p>
+                  <a
+                    href={hotel.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center text-sm font-semibold text-heritage hover:underline"
+                  >
+                    Visit hotel website &rarr;
+                  </a>
                 </article>
               ))}
             </div>
