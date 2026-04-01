@@ -18,7 +18,7 @@ export default function SubmissionsPage() {
       <PageHero
         accent="Action Required"
         title="Participant Submissions"
-        subtitle="Complete the attendee form before arriving at Nationals."
+        subtitle="Complete the attendee and submission form before arriving at Nationals."
       />
 
       {/* Deadline banner */}
@@ -62,6 +62,7 @@ export default function SubmissionsPage() {
               "All teammate names and emails are accurate",
               "Travel details for Boston arrival are selected",
               "Guest details are included (if applicable)",
+              "Pitch deck is submitted as a shareable link or file upload",
               "Dietary and accessibility needs are noted",
             ].map((item) => (
               <div
@@ -82,9 +83,9 @@ export default function SubmissionsPage() {
           <p className="section-label">Required</p>
           <h2 className="section-title">What to Submit</h2>
           <p className="mt-4 text-hp-gray leading-relaxed text-lg">
-            All participating teams must complete the attendee form below before the
-            deadline. This information helps us finalize logistics and ensure you
-            have the best possible experience at Nationals.
+            All participating teams must complete the form below before the deadline.
+            This single form is used for both attendee details and pitch deck
+            submission materials.
           </p>
 
           <div className="mt-10">
@@ -105,6 +106,10 @@ export default function SubmissionsPage() {
 
               <ul className="text-sm text-hp-gray space-y-3 mb-6">
                 {[
+                  "Pitch deck submission via shareable link (Canva, Google Slides, or equivalent)",
+                  'If submitting a link, set permissions to "Anyone with the link can view"',
+                  "Pitch deck file upload option (PPT or PDF)",
+                  "Deck updates are permitted by re-submitting the form before the deadline",
                   "Email, team name, and university details",
                   "Number of teammates traveling to Nationals (2, 3, or 4)",
                   "Team captain and teammate names and email addresses",
@@ -124,14 +129,15 @@ export default function SubmissionsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>
-                  <strong>Important:</strong> When you submit this form, it will not
-                  automatically collect your name and email unless you provide it in
-                  the required fields.
+                  <strong>Important:</strong> The form will not automatically collect
+                  your name and email unless you enter them in the required fields.
+                  If you revise your deck, please submit the updated link or file
+                  again before the deadline. The most recent submission will be used.
                 </span>
               </div>
 
               <CTAButton
-                label="Complete Attendee Form"
+                label="Complete Attendee + Submission Form"
                 href={submissions.attendeeFormUrl}
                 variant="primary"
                 external

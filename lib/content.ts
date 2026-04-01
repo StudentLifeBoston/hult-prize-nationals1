@@ -21,7 +21,7 @@ export const siteConfig = {
   // ── Submission links ──────────────────────────────────────
   submissions: {
     attendeeFormUrl:
-      "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_cbR8PDfakiOkc_v78fZjTev8U0VyydBqPEv-E_7J3FUQzkwV0kwQzVZMUlZQzQyMlNJWkRSQzlLMS4u",
+      "https://aviralnarang.notion.site/3350ee58e6aa80588627d717b9f1eff0?pvs=105",
     deadlineDate: "April 15, 2026",
     deadlineTime: "11:59 PM EST",
   },
@@ -252,11 +252,19 @@ export const siteConfig = {
       questions: [
         {
           q: "What do I need to submit before the event?",
-          a: "You must complete the 2026 East Coast National Competition Attendee Form on the Submissions page.",
+          a: "You must complete the 2026 East Coast National Competition Attendee Form on the Submissions page. The same form includes pitch deck submission fields (shareable link or file upload) and attendee details.",
         },
         {
           q: "What is the submission deadline?",
           a: "The attendee form is due by April 15, 2026 at 11:59 PM EST. Late submissions may affect event logistics.",
+        },
+        {
+          q: "How can we submit our pitch deck?",
+          a: "You may submit a shareable deck link (for example Canva or Google Slides) with view access enabled, or upload a PPT/PDF file through the same form.",
+        },
+        {
+          q: "Can we update our deck after submitting?",
+          a: "Yes. Please re-submit the form with the updated link or file before the deadline. The most recent submission will be used.",
         },
       ],
     },
