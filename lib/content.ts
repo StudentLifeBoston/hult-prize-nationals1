@@ -294,7 +294,11 @@ export const siteConfig = {
       questions: [
         {
           q: "Are there recommended hotels near the venue?",
-          a: "Yes. Hotel recommendations and campus accommodation options are listed on the Travel + Stay page. Additional details will be posted when finalized.",
+          a: "Yes. Hotel recommendations are listed on the Travel + Stay page. For on-campus housing at Hult House, use the Hult House Residency Request Form linked on that page.",
+        },
+        {
+          q: "How do I request on-campus housing at Hult House?",
+          a: "Complete the Hult House Residency Request Form on the Travel + Stay page. A minimum two-night stay applies. After submission, availability is reviewed and you will receive an invoice; room charges are due prior to arrival. For questions, contact Amanda Russell, Associate Director of Residential Life, at amanda.russell.1@hult.edu.",
         },
       ],
     },
@@ -325,6 +329,9 @@ export const siteConfig = {
     campusNote: "",
     transitNote:
       "Closest transit is the MBTA Green Line (Lechmere and Science Park/West End) with Community College on the Orange Line also nearby.",
+    /** Hult House on-campus residency request (Hult Prize US Nationals, East Coast) */
+    hultHouseResidencyFormUrl: "https://form.jotform.com/260904928731058",
+    hultHouseResidentialLifeEmail: "amanda.russell.1@hult.edu",
   },
 };
 

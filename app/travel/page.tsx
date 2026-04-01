@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
+import CTAButton from "@/components/CTAButton";
 import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -54,52 +55,96 @@ export default function TravelPage() {
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto space-y-10">
-          {/* Campus Accommodation */}
+          {/* Campus Accommodation — Hult House */}
           <div className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
               <div>
                 <h2 className="text-xl font-black text-hp-black">
-                  Campus Accommodation
+                  Hult House — On-Campus Housing
                 </h2>
                 <p className="text-sm text-hp-gray mt-0.5">
-                  On-campus housing at Hult Boston
+                  Hult Prize US Nationals, East Coast · Hult House Residency Request Form
                 </p>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-hp-border bg-gradient-to-br from-hp-off-white to-white p-6 sm:p-7">
+            <div className="rounded-2xl border border-hp-border bg-gradient-to-br from-hp-off-white to-white p-6 sm:p-7 space-y-6">
+              <p className="text-sm text-hp-gray leading-relaxed">
+                Participants interested in residing at Hult House, the on-campus
+                residence hall in Cambridge, Massachusetts, may request housing by
+                completing the form below.{" "}
+                <strong className="text-hp-black">A minimum two-night stay</strong> is
+                required. After submission, availability is reviewed and you will receive
+                an invoice.{" "}
+                <strong className="text-hp-black">All room charges are due prior to arrival.</strong>
+              </p>
+
+              <CTAButton
+                label="Open Hult House Residency Request Form"
+                href={siteConfig.travel.hultHouseResidencyFormUrl}
+                variant="primary"
+                external
+              />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-hp-gray">
                 <div className="rounded-xl bg-white border border-hp-border p-4">
-                  <p className="font-bold text-hp-black">Who this is for</p>
+                  <p className="font-bold text-hp-black">Arrival and departure</p>
                   <p className="mt-2">
-                    Teams seeking the shortest commute and simplified day-of logistics.
+                    <strong className="text-hp-black">Earliest arrival:</strong> April 30, 2026
+                  </p>
+                  <p className="mt-1">
+                    <strong className="text-hp-black">Latest departure:</strong> Sunday, May 3, 2026
+                  </p>
+                  <p className="mt-2 text-xs text-hp-gray">
+                    Dates are selected on the form. Minimum stay applies.
                   </p>
                 </div>
                 <div className="rounded-xl bg-white border border-hp-border p-4">
-                  <p className="font-bold text-hp-black">Why it is convenient</p>
+                  <p className="font-bold text-hp-black">Questions</p>
                   <p className="mt-2">
-                    On-campus accommodation keeps participants close to check-in, event rooms, and on-site support staff.
+                    Amanda Russell, Associate Director of Residential Life:{" "}
+                    <a
+                      className="text-heritage font-semibold hover:underline"
+                      href={`mailto:${siteConfig.travel.hultHouseResidentialLifeEmail}`}
+                    >
+                      {siteConfig.travel.hultHouseResidentialLifeEmail}
+                    </a>
                   </p>
                 </div>
               </div>
-              <ul className="mt-5 space-y-2.5 text-sm text-hp-gray">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
-                  Space is limited and assigned on availability.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
-                  Shared-room and check-in details will be communicated directly to registered teams.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
-                  For availability requests, contact{" "}
-                  <a className="text-heritage font-semibold hover:underline" href="mailto:hulthouse.frontdesk@hult.edu">
-                    hulthouse.frontdesk@hult.edu
-                  </a>
-                  .
-                </li>
-              </ul>
+
+              <div>
+                <p className="font-bold text-hp-black text-sm mb-3">
+                  The form collects (among other items)
+                </p>
+                <ul className="space-y-2 text-sm text-hp-gray">
+                  {[
+                    "Legal name and institutional email address",
+                    "Billing address and phone number",
+                    "Institutional affiliation",
+                    "Desired arrival and departure dates",
+                    "Ranking of housing style preferences (apartments include a kitchenette; dormitories do not)",
+                    "Optional mutual roommate request",
+                    "Acknowledgement of availability, payment, age (18+ on arrival), and key-card access terms",
+                  ].map((line) => (
+                    <li key={line} className="flex items-start gap-2">
+                      <span
+                        className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0"
+                        aria-hidden="true"
+                      />
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-xs text-hp-gray border-t border-hp-border pt-4">
+                Housing is subject to availability and is confirmed pending availability.
+                Units are issued only after payment is completed in full. Housing is
+                available only to individuals who are 18 years or older on the day of
+                arrival. Electronic key-card access ends at 12:00 PM (noon) on the selected
+                departure day.
+              </p>
             </div>
           </div>
 
