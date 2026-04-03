@@ -13,7 +13,13 @@ export const metadata: Metadata = {
     "Travel, accommodation, and transportation guidance for Hult Prize Nationals at Hult Boston 2026.",
 };
 
-type CuratedTag = "Dining" | "Culture" | "Café" | "Outing" | "Neighborhoods";
+type CuratedTag =
+  | "Dining"
+  | "Culture"
+  | "Café"
+  | "Outing"
+  | "Neighborhoods"
+  | "Dessert";
 type TagColor = "heritage" | "purple" | "sky" | "hp-orange";
 
 const studentLifeCurated = [
@@ -101,6 +107,46 @@ const studentLifeCurated = [
           "For an outing with your team, walk around Faneuil Hall and Quincy Market. There is always something happening here—street performers, food stalls, and shopping. Not far away is Boston’s North End, our Little Italy: settled in the 1630s, rich in history, and today full of Italian restaurants and bakeries. A cannoli at Mike’s Pastry is a personal favorite—bring cash.",
         href: "https://www.faneuilhallmarketplace.com/",
         linkLabel: "Faneuil Hall Marketplace",
+      },
+    ],
+  },
+  {
+    slug: "angel",
+    name: "Angel Hoagland",
+    role: "Student Life Team",
+    initials: "AH",
+    imageSrc: "/student-life/angel.png",
+    picks: [
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Kala Thai",
+        meta: "Downtown Boston · Kala Thai Cookery",
+        body:
+          "Chef-led Thai cooking in a cozy, sit-down setting (think curries, noodles, and wok dishes built around fresh herbs and heat you can dial up or down). It’s a strong pick when your group wants fragrant, comforting plates after walking the North End or downtown.",
+        href: "https://www.kalathaiboston.com/",
+        linkLabel: "Kala Thai Cookery",
+      },
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Happy Lamb Hot Pot",
+        meta: "Cambridge, MA · AYCE hot pot on Mass Ave",
+        body:
+          "Mongolian-style hot pot: choose your broth, then cook thin-sliced meats, noodles, and vegetables right at the table. Angel’s tip: look for the weekday all-you-can-eat special—she’s seen it around $20 on weekdays (pricing and rules can change, so worth confirming before you go). Central Square–friendly for groups who want a long, interactive meal.",
+        href:
+          "https://www.google.com/maps/search/?api=1&query=Happy+Lamb+Hot+Pot+485+Massachusetts+Ave+Cambridge+MA",
+        linkLabel: "Open in Maps",
+      },
+      {
+        tag: "Dessert" as CuratedTag,
+        tagColor: "hp-orange" as TagColor,
+        title: "Helados Juli's Frozen Dessert",
+        meta: "Colombian-inspired ice cream & paletas",
+        body:
+          "A family-owned ice cream shop known for colorful paletas, tropical fruit flavors, and over-the-top frozen treats—perfect when you want something cold, sweet, and a little festive after a day in the city. Several Boston-area locations; check hours for the one that fits your route.",
+        href: "https://www.heladosjulisinc.com/",
+        linkLabel: "Helados Juli’s",
       },
     ],
   },
