@@ -253,6 +253,13 @@ export default function TravelPage() {
       website: "https://www.sonesta.com/royal-sonesta/ma/cambridge/royal-sonesta-boston",
       note: "Premium riverfront option suitable for judges, guests, and faculty members.",
     },
+    {
+      name: "DoubleTree by Hilton",
+      walkTime: "Short drive",
+      location: "Everett, MA",
+      website: "https://www.hilton.com/en/locations/usa/massachusetts/everett/doubletree-by-hilton/",
+      note: "A comfortable accommodation option accessible via car or ride-share.",
+    },
   ];
 
   return (
@@ -382,7 +389,7 @@ export default function TravelPage() {
               <div>
                 <h2 className="text-xl font-black text-hp-black">Hotels</h2>
                 <p className="text-sm text-hp-gray mt-0.5">
-                  Hotels located within approximately a 15-minute walk from campus
+                  Recommended hotels near the campus
                 </p>
               </div>
             </div>
